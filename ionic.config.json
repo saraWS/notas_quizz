@@ -1,0 +1,7 @@
+{
+  "name": "quiz_notas_sw",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
