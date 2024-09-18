@@ -1,20 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>REGISTRO NOTAS</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <!-- Select para elegir el semestre -->
+  <ion-item>
+    <ion-label>Seleccionar Semestre</ion-label>
+    <ion-select [(ngModel)]="selectedSemestre" placeholder="Seleccionar">
+      <ion-select-option value="1">Semestre 1</ion-select-option>
+      <ion-select-option value="2">Semestre 2</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Botones para manejar materias -->
+  <div>
+    <h2>Operaciones</h2>
+    <ion-button (click)="crearMateria()">REGISTRAR</ion-button>
+    <ion-button (click)="modificarMateria()">MODIFICAR</ion-button>
+    <ion-button (click)="eliminarMateria()">ELIMINAR</ion-button>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Este es el programa para la revisión de notas académicas</ion-title>
+  </ion-toolbar>
+</ion-footer>
